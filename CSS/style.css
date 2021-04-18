@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+* {
+    background-color: seashell;
+}
+header{
+    text-align: center;
+    position: relative;
+    color: red;
+}
+a{
+    font-family: 'Zen Dots', cursive;
+    color: saddlebrown;
+    text-decoration: none;
+    font-size: 20px;
+}
