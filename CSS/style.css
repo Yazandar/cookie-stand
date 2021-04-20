@@ -15,9 +15,7 @@ a{
     font-size: 20px;
 }
 
-/* #salestable table {
-    border: 1px  solid black;
-} */
+
 table{
     border-collapse: collapse;
     border: 1px  solid black;
@@ -28,4 +26,6 @@ td,tr{
   border: 1px  solid black;
     padding: 15px;
     width: 7px;  
+    text-align: center;
+    
 }
