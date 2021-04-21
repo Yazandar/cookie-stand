@@ -10,10 +10,108 @@
 <body>
     <header>
         <h1>Salmon Cookies</h1>
-        <img src="./img/salmon.png" alt="">
+        <div class="slides">
+            <div class="photo" >
+                <div class = 'pic'>
+                <img src="./img/shirt.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class= 'pic'>
+                <img src="./img/salmon.png" alt="">
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class= 'pic'>
+                <img src="./img/frosted-cookie.jpg" alt="">
+                </div>
+            </div>
+            <div class="photo">
+                <div class= 'pic'>
+                <img src="./img/fish.jpg" alt="">
+                </div>
+            </div>
+            <div class="photo">
+                <div class= 'pic'>
+                <img src="./img/family.jpg" alt="">
+                </div>
+            </div>
+            <div class="photo">
+                <div class= 'pic'>
+                <img src="./img/cutter.jpeg" alt="">
+                </div>
+            </div>
+            <div class="photo">
+                <div class= 'pic'>
+                <img src="./img/chinook.jpg" alt="">
+                </div>
+            </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div> 
+        <script>
+            var slideNum= 1;
+            showSlide (slideNum);
+
+            function plusSlides(n){
+                showSlide(slideNum += n);
+            }
+
+            function showSlide(n) {
+            var i;
+            var shown= document.getElementsByClassName("photo");
+            if (n>shown.length){slideNum = 1}
+            if (n<1){slideNum = shown.length};
+            for (i = 0; i< shown.length; i++) {
+                shown[i].style.display = "none";
+                
+            }
+            
+                shown[slideNum-1].style.display="block";
+                
+            }
+        </script>
     </header>
     <main>
         <a href="./sales.html">Cities Sales</a>
+        <hr>
+        <h2>Seattel</h2>
+        <ul>
+            <li>Opens : 6am - 7pm</li>
+            <li>Contact information : 232-841-1513</li>
+            <li>222 5th Ave N, Seattle, WA 98109, United States</li>
+        </ul>
+        <hr>
+        <h2>Tokyo</h2>
+        <ul>
+            <li>Opens : 6am - 7pm</li>
+            <li>Contact information : 813-5351-4498</li>
+            <li>2 Chome-6-7 Yoyogi, Shibuya City, Tokyo 151-0053, Japan</li>
+        </ul>
+        <hr>
+        <h2>Dubai</h2>
+        <ul>
+            <li>Opens : 6am - 7pm</li>
+            <li>Contact information : 971-600-588885</li>
+            <li>Dubai Media City - Dubai - United Arab Emirates</li>
+        </ul>
+        <hr>
+        <h2>Paris</h2>
+        <ul>
+            <li>Opens : 6am - 7pm</li>
+            <li>Contact information : 331-4526-7467</li>
+            <li>73 Boulevard de Clichy, 75009 Paris, France</li>
+        </ul>
+        <hr>
+        <h2>Lima</h2>
+        <ul>
+            <li>Opens : 6am - 7pm</li>
+            <li>Contact information : 419-991-3903</li>
+            <li>2619 Elida Rd, Lima, OH 45805, United States</li>
+        </ul>
     </main>
     <footer>
 
