@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 
 * {
-    background-color: seashell;
+    background-color: rgba(214, 160, 121, 0.425);
 }
 header{
     text-align: center;
@@ -16,11 +16,24 @@ a{
 }
 
 
-td,tr{
+td,tr,th{
   border: 1px  solid black;
     padding: 15px;
     width: 7px;  
     text-align: center;
     
+}
+
+label {
+    color: blue;
+}
+
+input:nth-child(9){
+    background-color: rgba(80, 80, 180, 0.445);
+}
+
+input {
+    background-color: white;
+    padding: 10px;
 }
 
