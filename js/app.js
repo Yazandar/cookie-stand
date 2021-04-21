@@ -1,8 +1,8 @@
 'use strict';
 
 let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-const parentElement = document.getElementById('salesData');
 let datatable = document.getElementById('Datatable');
+const addingBranch= document.getElementById('newBranch');
 
 function Salmon(name, mincust, maxcust, avgsale) {
   this.name = name;
@@ -21,7 +21,6 @@ Salmon.prototype.gitCustNumber = function () {
     let cookiee = Math.ceil(getRandomValue(this.mincust, this.maxcust) * this.avgsale);
     this.cookiesPerHour.push(cookiee);
     this.total += cookiee;
-    console.log(`${hour[i]} : ${this.cookiesPerHour[i]}`);
   }
 };
 
@@ -95,22 +94,40 @@ new Salmon('Dubai', '11	', '38', '3.7');
 new Salmon('Paris', '20', '38', '2.3');
 new Salmon('Lima', '2', '16', '4.6');
 
+
 function render() {
   for(let i = 0; i < Salmon.allCity.length; i++){
     Salmon.allCity[i].render();
+
   }
 }
 
 heading();
 render();
-
+footers();
 function getRandomValue(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-//console.log(Salmon.allCity)
+
+addingBranch.addEventListener('submit',submitNew);
+function submitNew(test){
+  test.preventDefault();
+
+  const name = test.target.location.value;
+  const min = test.target.minCus.value;
+  const max = test.target.mixCus.value;
+  const avg = test.target.avSale.value;
+  let newStore = new Salmon(name,min,max,avg);
+  datatable.deleteRow(datatable.rows.length-1);
+  newStore.render();
+  footers();
+}
 
 
-footers();
+
+
+
+
