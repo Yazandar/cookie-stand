@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 * {
     background-color: rgba(214, 160, 121, 0.425);
 }
@@ -16,12 +17,19 @@ a{
 }
 
 
-td,tr,th{
+td,tr{
   border: 1px  solid black;
     padding: 15px;
     width: 7px;  
     text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: red;
     
+}
+th{
+    color: black;
 }
 
 label {
@@ -35,5 +43,39 @@ input:nth-child(9){
 input {
     background-color: white;
     padding: 10px;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: royalblue;
+}
+
+main {
+    background-color: chocolate;
+    text-align: center;
+}
+
+#Datatable {
+    text-align: center;
+    margin: auto;
+}
+
+ul  {
+    list-style-type: none;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    border: 2px solid black;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Yellowtail', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    color: red;
 }
 
